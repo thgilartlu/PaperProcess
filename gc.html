@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaperProcess - Digital Transformation Studio</title>
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CUSTOM CSS -->
+    <link href="/css/main.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOM COLOURS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandBlack: "#191919",
+              brandIndigo: "#4F25FA",
+              brandYellow: "#FFCC41",
+              brandGrey: "F5F5FB",
+              brandWhite: "#FFFF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Section 1 -->
+    <section class="w-full px-6 pb-12 antialiased bg-white">
+      <div class="mx-auto max-w-7xl">
+        <nav
+          class="relative z-50 h-24 select-none"
+          x-data="{ showMenu: false }"
+        >
+          <div
+            class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2"
+          >
+            <div class="flex items-center justify-start w-1/4 h-full pr-4">
+              <a href="/index.html" class="inline-block py-4 md:py-0">
+                <span class="p-1 text-xl font-black leading-none text-gray-900"
+                  ><span>PaperProcess</span
+                  ><span class="text-brandIndigo">.</span></span
+                >
+              </a>
+            </div>
+            <div
+              class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
+              :class="{'flex fixed': showMenu, 'hidden': !showMenu }"
+            >
+              <div
+                class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row"
+              >
+                <a
+                  href="/index.html"
+                  class="inline-flex items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden"
+                  >PaperProcess<span class="text-brandIndigo">.</span></a
+                >
+                <div
+                  class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center"
+                ></div>
+                <div
+                  class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0"
+                >
+                  <a
+                    href="#"
+                    class="w-full px-6 py-2 mr-0 text-gray-700 md:px-0 lg:pl-2 md:mr-4 lg:mr-5 md:w-auto"
+                    >Services</a
+                  >
+                  <a
+                    href="/team.html"
+                    class="w-full px-6 py-2 mr-0 text-gray-700 md:px-0 lg:pl-2 md:mr-4 lg:mr-5 md:w-auto"
+                    >Team</a
+                  >
+                  <a
+                    href="#"
+                    class="w-full px-6 py-2 mr-0 text-gray-700 md:px-0 lg:pl-2 md:mr-4 lg:mr-5 md:w-auto"
+                    >Insight</a
+                  >
+                  <a
+                    href="#_"
+                    class="inline-flex items-center w-full px-6 py-3 text-sm font-medium leading-4 text-white bg-brandIndigo md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-brandYellow hover:text-brandBlack focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-green-600"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              @click="showMenu = !showMenu"
+              class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100"
+            >
+              <svg
+                class="w-6 h-6 text-gray-700"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                x-cloak=""
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+              <svg
+                class="w-6 h-6 text-gray-700"
+                x-show="showMenu"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                x-cloak=""
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h1 class="sr-only">Profile</h1>
+      <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+          <!-- Welcome panel -->
+          <section aria-labelledby="profile-overview-title">
+            <div class="rounded-lg bg-white overflow-hidden shadow">
+              <h2 class="sr-only" id="profile-overview-title">
+                Profile Overview
+              </h2>
+              <div class="bg-white p-6">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                  <div class="sm:flex sm:space-x-5">
+                    <div class="flex-shrink-0">
+                      <img
+                        class="mx-auto h-20 w-20 rounded-full"
+                        src="https://media-exp1.licdn.com/dms/image/C4E03AQElAghJT9_I_w/profile-displayphoto-shrink_800_800/0/1658752460229?e=1665619200&v=beta&t=T8v7tm5HpI6CJqksC-qRj8jNl5lwWljQKxwa0YtSEv0"
+                        alt=""
+                      />
+                    </div>
+                    <div class="mt-4 text-center sm:mt-0 sm:pt-1 sm:text-left">
+                      <p class="text-sm font-medium text-gray-600">
+                        Operations Specialist
+                      </p>
+                      <p class="text-xl font-bold text-gray-900 sm:text-2xl">
+                        George Cooper
+                      </p>
+                      <p class="text-sm font-medium text-gray-600">
+                        Data Analyst @ IG Doors
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/george-cooper-a72910168/"
+                  >
+                    <button
+                      type="button"
+                      class="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-brandIndigo hover:bg-brandYellow hover:text-brandBlack focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                      View on LinkedIn
+                      <!-- Heroicon name: solid/mail -->
+                      <svg
+                        class="ml-2 -mr-0.5 h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                        />
+                        <path
+                          d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="border-t border-gray-200 bg-gray-50 grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 sm:divide-x"
+              >
+                <div class="px-6 py-5 text-sm font-medium text-center">
+                  <span class="text-gray-900">Newport, U.K</span>
+                  <span class="text-gray-600">(Open to Remote)</span>
+                </div>
+
+                <div class="px-6 py-5 text-sm font-medium text-center">
+                  <span class="text-gray-600">Contact for Mobile</span>
+                </div>
+
+                <div class="px-6 py-5 text-sm font-medium text-center">
+                  <span class="text-gray-600">Contact for Email</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="flow-root">
+            <ul role="list" class="-mb-8">
+              <li>
+                <div class="relative pb-8">
+                  <span
+                    class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
+                    aria-hidden="true"
+                  ></span>
+                  <div class="relative flex items-start space-x-3">
+                    <div class="relative px-1">
+                      <div
+                        class="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center"
+                      >
+                        <!-- Heroicon name: solid/tag -->
+                        <svg
+                          class="h-5 w-5 text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 11l7-7 7 7M5 19l7-7 7 7"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div>
+                        <div class="text-sm">
+                          <a href="#" class="font-medium text-gray-900"
+                            >Data Analyst</a
+                          ><span class="text-gray-500"> @ IG Doors</span>
+                        </div>
+                        <p class="mt-0.5 text-sm text-gray-500">
+                          March 2022 - Present
+                        </p>
+                      </div>
+                      <div class="mt-2 text-sm text-gray-700">
+                        <p>
+                          Acting independently as part of a data team
+                          responsible for producing key, actionable insights and
+                          information for internal consumption.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Conducting Data Extraction, Storage, Processing and
+                          Analysis.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Development & Maintenance of PowerBI & SSRS
+                          dashboard/reports.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Identify, Evaluate and Implement external services and
+                          tools to support data transformation and validation.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Produce and Track Key Performance Indicators(KPI) to
+                          support the business and identify appropriate
+                          solutions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="relative pb-8">
+                  <span
+                    class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
+                    aria-hidden="true"
+                  ></span>
+                  <div class="relative flex items-start space-x-3">
+                    <div class="relative px-1">
+                      <div
+                        class="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center"
+                      >
+                        <!-- Heroicon name: solid/tag -->
+                        <svg
+                          class="h-5 w-5 text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 11l7-7 7 7M5 19l7-7 7 7"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div>
+                        <div class="text-sm">
+                          <a href="#" class="font-medium text-gray-900"
+                            >Root Cause Analyst</a
+                          ><span class="text-gray-500"> @ TargetGroup</span>
+                        </div>
+                        <p class="mt-0.5 text-sm text-gray-500">
+                          January 2022 - June 2022
+                        </p>
+                      </div>
+                      <div class="mt-2 text-sm text-gray-700">
+                        <p>
+                          Working as part of a specialist team tasked with
+                          conducting root cause analysis, regulatory compliance,
+                          process mapping & re-engineering organisation-wide.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Perform detailed analysis on business performance
+                          indicators identified via root cause & trend analysis.
+                          Producing key actionable insights.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Utilise statistical techniques to interpret complaints
+                          data, analyse results and produce comprehensive
+                          reports.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Reviewing comprehensive reports and Key Performance
+                          Indicators to filter and clean data and identify
+                          issues.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Investigate and Improve process and procedures
+                          business wide using new or existing data sources.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="relative pb-8">
+                  <div class="relative flex items-start space-x-3">
+                    <div class="relative px-1">
+                      <div
+                        class="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center"
+                      >
+                        <!-- Heroicon name: solid/tag -->
+                        <svg
+                          class="h-5 w-5 text-gray-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 11l7-7 7 7M5 19l7-7 7 7"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div>
+                        <div class="text-sm">
+                          <a href="#" class="font-medium text-gray-900"
+                            >Data Subject Rights Specialist</a
+                          ><span class="text-gray-500"> @ TargetGroup</span>
+                        </div>
+                        <p class="mt-0.5 text-sm text-gray-500">
+                          August 2018 - December 2021
+                        </p>
+                      </div>
+                      <div class="mt-2 text-sm text-gray-700">
+                        <p>
+                          Working as part of a specialist team responsible for
+                          the regulatory assurance; due diligence in Data
+                          Privacy and Data Protection.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Supporting the business with technical knowledge and
+                          expertise in the areas of Privacy and Data Protection.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Managing the general administration of Subject Access
+                          Requests (SARs).
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Investigate and resolve regulator (ICO) escalated
+                          complaints.
+                        </p>
+                        <p class="mt-2 flex items-center text-sm text-gray-500">
+                          <!-- Heroicon name: solid/check-circle -->
+                          <svg
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-brandIndigo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Investigate and Improve process and procedures
+                          business wide using new or existing data sources.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="grid grid-cols-1 gap-4">
+          <!-- Announcements -->
+          <section aria-labelledby="announcements-title">
+            <div class="rounded-lg bg-white overflow-hidden shadow">
+              <div class="p-6">
+                <div class="my-6">
+                  <a
+                    href="https://drive.google.com/file/d/1lq74KEwMmFAjt7geB6MH7jTSfCKmGJO9/view?usp=sharing"
+                    class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-brandYellow"
+                  >
+                    Download CV
+                  </a>
+                </div>
+                <h2
+                  class="text-base font-medium text-gray-900"
+                  id="announcements-title"
+                >
+                  Skills
+                </h2>
+                <div class="flow-root mt-6">
+                  <ul role="list" class="-my-5 divide-y divide-gray-200">
+                    <li class="py-5">
+                      <div
+                        class="relative focus-within:ring-2 focus-within:ring-cyan-500"
+                      >
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          <!-- Extend touch target to entire panel -->
+                          <span
+                            class="absolute inset-0"
+                            aria-hidden="true"
+                          ></span>
+                          Data
+                        </h3>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          SQL
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          PowerBI
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Tableau
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Exploratory Data Analysis
+                        </span>
+                      </div>
+                    </li>
+
+                    <li class="py-5">
+                      <div
+                        class="relative focus-within:ring-2 focus-within:ring-cyan-500"
+                      >
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          <!-- Extend touch target to entire panel -->
+                          <span
+                            class="absolute inset-0"
+                            aria-hidden="true"
+                          ></span>
+                          Operational
+                        </h3>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Data Privacy/GDPR
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Root Cause Analysis
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Trend Analysis
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Service Desk Support
+                        </span>
+                      </div>
+                    </li>
+
+                    <li class="py-5">
+                      <div
+                        class="relative focus-within:ring-2 focus-within:ring-cyan-500"
+                      >
+                        <h3 class="text-sm font-semibold text-gray-800">
+                          <!-- Extend touch target to entire panel -->
+                          <span
+                            class="absolute inset-0"
+                            aria-hidden="true"
+                          ></span>
+                          Leadership
+                        </h3>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Data Analysis & Insight
+                        </span>
+                        <span
+                          class="inline-flex items-center mt-1 px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-brandBlack"
+                        >
+                          Complaint Handling
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Hires -->
+          <section aria-labelledby="recent-hires-title">
+            <div class="rounded-lg bg-white overflow-hidden shadow">
+              <div class="p-6">
+                <h2
+                  class="text-base font-medium text-gray-900"
+                  id="recent-hires-title"
+                >
+                  Education
+                </h2>
+                <div class="flow-root mt-6">
+                  <ul role="list" class="-my-5 divide-y divide-gray-200">
+                    <li class="py-4">
+                      <div class="flex items-center space-x-4">
+                        <div class="flex-1 min-w-0">
+                          <h3 class="text-sm font-semibold text-gray-800">
+                            Microsoft Certification Program
+                          </h3>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Adobe Suite
+                            <span class="text-sm text-gray-500 truncate"
+                              >(Top 0.5%)</span
+                            >
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Office Suite
+                            <span class="text-sm text-gray-500 truncate"
+                              >(Top 0.5%)</span
+                            >
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            SQL
+                            <span class="text-sm text-gray-500 truncate"
+                              >(Top 0.5%)</span
+                            >
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Tableau
+                            <span class="text-sm text-gray-500 truncate"
+                              >(Top 0.5%)</span
+                            >
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            VBA
+                            <span class="text-sm text-gray-500 truncate"
+                              >(Top 0.5%)</span
+                            >
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Excel
+                            <span class="text-sm text-gray-500 truncate"
+                              >(Top 0.5%)</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="py-4">
+                      <div class="flex items-center space-x-4">
+                        <div class="flex-1 min-w-0">
+                          <h3 class="text-sm font-semibold text-gray-800">
+                            A-Level/BTEC
+                          </h3>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Media Studies
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            English (Lang)
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Creative Media ext. Diploma
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="py-4">
+                      <div class="flex items-center space-x-4">
+                        <div class="flex-1 min-w-0">
+                          <h3 class="text-sm font-semibold text-gray-800">
+                            GCSE
+                          </h3>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            English (Lit)
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            English (Lang)
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            IFS Financial Studies
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Sociology
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            ICT
+                          </p>
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Mathematics
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- START FOOTER SECTION -->
+    <p class="text-center p-4 text-gray-600 mt-10">
+      Designed By
+      <a
+        class="border-b text-brandIndigo"
+        href="https://sxunders.com/"
+        target="_blank"
+        >@Sxunders</a
+      >. Powered by
+      <a
+        class="border-b text-brandIndigo"
+        href="https://tailwindui.com/"
+        target="_blank"
+        >TailwindCSS</a
+      >.
+    </p>
+    <!-- END FOOTER SECTION -->
+  </body>
+</html>
