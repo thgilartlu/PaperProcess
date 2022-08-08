@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="24" viewBox="0 0 400 66">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 48px;
+        fill: #171717;
+        font-family: Poppins;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #42b883;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <text id="PaperProcess" class="cls-1" x="18" y="43">PaperProcess</text>
+  <path id="Triangle_1" data-name="Triangle 1" class="cls-2" d="M366.25,40l-7.5,4.344V35.656Z"/>
+  <path id="Triangle_1_copy" data-name="Triangle 1 copy" class="cls-2" d="M374.25,40l-7.5,4.344V35.656Z"/>
+</svg>
