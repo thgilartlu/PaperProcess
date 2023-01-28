@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="16x16" href="/favicon.svg" />
     <title>PaperProcess | Digital Transformation Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6695672601.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -14,328 +19,175 @@
             fontFamily: {
               Poppins: ["Poppins", "sans-serif"],
             },
-            backgroundImage: {
-              graphpaper: "url('./img/bg_06.svg')",
-            },
           },
         },
       };
     </script>
-    <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml" />
-  </head>
-  <body class="font-Poppins">
-    <header>
-      <!-- ALERT -->
-      <div class="bg-black text-center py-1">
-        <a
-          href="https://www.linkedin.com/posts/michaelsxunders_automation-what-why-how-of-rpa-activity-6965013505863258112-jE0W"
-        >
-          <div
-            class="p-2 bg-white items-center text-gray-900 leading-none lg:rounded-full flex lg:inline-flex hover:bg-green-500 hover:text-white"
-            role="alert"
-          >
-            <span
-              class="flex rounded-full bg-green-500 text-white uppercase px-2 py-1 text-xs font-bold mr-3"
-              >New</span
-            >
-            <span class="font-semibold mr-2 text-left flex-auto"
-              >Automation: What, Why & How of RPA.</span
-            >
-            <svg
-              class="fill-current opacity-75 h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 20 20"
-            >
-              <path
-                d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
-              />
-            </svg>
-          </div>
-        </a>
-      </div>
-      <!-- NAV -->
-      <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
-        <div
-          class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2"
-        >
-          <div class="flex items-center justify-start w-1/4 h-full pr-4">
-            <a href="./index.html" class="inline-block py-4 md:py-0">
-              <span
-                class="p-1 text-3xl font-extrabold leading-none text-gray-900"
-              >
-                <img class="w-auto" src="./img/logo.svg" alt=""
-              /></span>
-            </a>
-          </div>
-          <div
-            class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
-            :class="{'flex fixed': showMenu, 'hidden': !showMenu }"
-          >
-            <div
-              class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row"
-            >
-              <a
-                href="./index.html"
-                class="inline-flex items-center block w-auto h-16 px-6 text-xl font-extrabold leading-none text-gray-900 md:hidden"
-                >PaperProcess<span class="text-green-500">.</span></a
-              >
-              <div
-                class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center"
-              ></div>
-              <div
-                class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0"
-              >
-                <a
-                  href="./index.html"
-                  class="w-full px-6 py-2 mr-0 text-gray-500 md:px-0 md:mr-4 lg:mr-5 md:w-auto hover:text-gray-900"
-                  >Home</a
-                >
-                <a
-                  href="./team.html"
-                  class="w-full px-6 py-2 mr-0 text-gray-500 md:px-0 md:mr-4 lg:mr-5 md:w-auto hover:text-gray-900"
-                  >Team</a
-                >
-                <a
-                  href="./insight.html"
-                  class="w-full px-6 py-2 mr-0 text-gray-500 md:px-0 md:mr-4 lg:mr-5 md:w-auto hover:text-gray-900"
-                  >Insight</a
-                >
-                <a
-                  href="./contact.html"
-                  class="inline-flex items-center w-full px-6 py-3 text-sm font-medium leading-4 text-white bg-gray-900 md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-green-500 hover:text-white focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-green-600"
-                  >Contact</a
-                >
+</head>
+<body class="font-Poppins text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black">
+<main>
+    <div class="mx-auto flex h-screen max-w-7xl flex-col justify-between px-4">
+        <header class="flex h-[80px] items-center justify-between md:h-[100px] m-w-7xl">
+            <div class="flex items-center gap-3">
+                <a href="/index.html"><img src="logo.png" alt="Logo" class="h-8 transition ease-in-out delay-150 hover:-rotate-180 hover:scale-110 duration-300"></a>
+            </div>
+            <nav class="flex items-center gap-2">
+                <ul class="flex gap-3">
+                    <li class="inline-flex items-center justify-center">
+                        <a href="https://medium.com/paperprocess" class="text-slate-500 font-regular mr-4 p-2 rounded hover:text-white group transition duration-300">Insights
+                            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-500"></span>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center justify-center">
+                        <a href="#" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-slate-500 font-regular mr-4 p-2 rounded hover:text-white group transition duration-300">Resources
+                            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-500"></span>
+                        </a>
+                    </li>
+                </ul>
+                <span aria-hidden="true" class="bg-slate-800 mr-4 hidden h-5 w-px sm:!inline-block"></span>
+                <ul class="flex gap-2">
+                    <li class="inline-flex items-center justify-center">
+                        <a href="https://www.linkedin.com/company/87204728" class="text-slate-500 mr-4 p-2 rounded hover:text-white hover:bg-slate-800">
+                            <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center justify-center">
+                        <a href="/contact.html" class="text-slate-500 mr-4 p-2 rounded hover:text-white hover:bg-slate-800">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="overflow-hidden py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+            <div class="relative mx-auto max-w-xl">
+              <svg class="absolute left-full translate-x-1/2 transform" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+                <defs>
+                  <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="4" height="4" class="text-green-500" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+              </svg>
+              <svg class="absolute right-full bottom-0 -translate-x-1/2 transform" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+                <defs>
+                  <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+              </svg>
+              <div class="inline-flex items-center text-center">
+                <h2 class="block text-3xl font-bold tracking-tight text-slate-200 sm:text-5xl">Great Things Happen When You Say <span id="hello" class="inline-block text-3xl font-bold tracking-tight text-green-500 sm:text-5xl" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">Hello.</span></h2>
+              </div>
+              <div class="mt-12">
+                <form action="https://formsubmit.co/contact@paper-process.com" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                  <div>
+                    <label for="first-name" class="block text-sm font-medium text-slate-600">First name</label>
+                    <div class="mt-1">
+                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-green-500 focus:ring-greem-500">
+                    </div>
+                  </div>
+                  <div>
+                    <label for="last-name" class="block text-sm font-medium text-slate-600">Last name</label>
+                    <div class="mt-1">
+                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-green-500 focus:ring-greem-500">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="email" class="block text-sm font-medium text-slate-600">Email</label>
+                    <div class="mt-1">
+                      <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-green-500 focus:ring-greem-500">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="phone-number" class="block text-sm font-medium text-slate-600">Phone Number</label>
+                    <div class="relative mt-1 rounded-md shadow-sm">
+                      <input type="text" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-gray-300 py-3 px-4 focus:border-green-500 focus:ring-greem-500">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="message" class="block text-sm font-medium text-slate-600">Message</label>
+                    <div class="mt-1">
+                      <textarea id="message" name="message" rows="4" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-green-500 focus:ring-greem-500"></textarea>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <div class="flex items-start">
+                      <div class="ml-3">
+                        <p class="text-base text-slate-500">
+                          We care about the protection of your data. Read our
+                          <a href="#" class="font-medium text-white underline">Privacy Policy</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <button type="submit" class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-slate-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Let's talk</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div
-            @click="showMenu = !showMenu"
-            class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100"
-          >
-            <svg
-              class="w-6 h-6 text-gray-700"
-              x-show="!showMenu"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewbox="0 0 24 24"
-              stroke="currentColor"
-              x-cloak=""
-            >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg
-              class="w-6 h-6 text-gray-700"
-              x-show="showMenu"
-              fill="none"
-              stroke="currentColor"
-              viewbox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              x-cloak=""
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- CONTACT -->
-      <div class="relative bg-white">
-        <div class="absolute inset-0">
-          <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
-        </div>
-        <div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
-          <div
-            class="bg-gray-50 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12"
-          >
-            <div class="max-w-lg mx-auto">
-              <h2
-                class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl"
-              >
-                Get in touch
-              </h2>
-              <p class="mt-3 text-lg leading-6 text-gray-500">
-                It all starts with a conversation. We are always on the lookout
-                for great partners to work with—clients who are passionate about
-                their businesses and customers. Fill in a few details and we
-                will get in touch as soon as possible.
-              </p>
-              <dl class="mt-8 text-base text-gray-500">
-                <div>
-                  <dt class="sr-only">Based In</dt>
-                  <dd>
-                    <p>Based within</p>
-                    <p>South Wales, United Kingdom.</p>
-                  </dd>
-                </div>
-                <div class="mt-3">
-                  <dt class="sr-only">Email</dt>
-                  <dd class="flex">
-                    <!-- Heroicon name: outline/mail -->
-                    <svg
-                      class="flex-shrink-0 h-6 w-6 text-gray-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewbox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <span class="ml-3"> paperprocess@sxunders.com </span>
-                  </dd>
-                </div>
-              </dl>
-              <p class="mt-6 text-base text-gray-500">
-                Thinking of joining our team? <br />
-                <a href="#" class="font-medium text-gray-700 underline"
-                  >View open specialities</a
-                >.
-              </p>
+    </div>
+    <footer>
+        <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+            <div class="px-5 py-2">
+              <a href="/index.html" class="text-slate-500 font-regular hover:text-white">Home</a>
             </div>
-          </div>
-          <div
-            class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12"
-          >
-            <div class="max-w-lg mx-auto lg:max-w-none">
-              <form
-                action="https://formsubmit.co/paperprocess@sxunders.com"
-                method="POST"
-                class="grid grid-cols-1 gap-y-6"
-              >
-                <div>
-                  <label for="name" class="sr-only">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    autocomplete="name"
-                    class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-white focus:border-green-500 border-gray-300 rounded-md"
-                    placeholder="Name"
-                  />
-                </div>
-                <div>
-                  <label for="email" class="sr-only">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-white focus:border-green-500 border-gray-300 rounded-md"
-                    placeholder="Email"
-                  />
-                </div>
-                <div>
-                  <label for="phone" class="sr-only">Phone</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    autocomplete="tel"
-                    class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-white focus:border-green-500 border-gray-300 rounded-md"
-                    placeholder="Phone"
-                  />
-                </div>
-                <div>
-                  <label for="message" class="sr-only">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-white focus:border-green-500 border border-gray-300 rounded-md"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gray-900 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+            <div class="px-5 py-2">
+                <a href="https://medium.com/paperprocess" class="text-slate-500 font-regular hover:text-white">Insights</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="bg-white">
-      <!-- FOOTER -->
-      <div class="max-w-7xl mx-auto pb-8 px-4">
-        <div
-          class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16"
-        >
-          <div class="flex space-x-6 md:order-2">
-            <a href="#" class="text-gray-400 hover:text-gray-500">
+            <div class="px-5 py-2">
+                <a href="#" class="text-slate-500 font-regular hover:text-white">Resources</a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-slate-500 font-regular hover:text-white">Partners</a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-slate-500 font-regular hover:text-white">Press</a>
+            </div>
+          </nav>
+          <div class="mt-8 flex justify-center space-x-6">
+            <a href="https://www.linkedin.com/company/87204728" class="text-slate-500 hover:text-white">
               <span class="sr-only">LinkedIn</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewbox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                />
-              </svg>
+              <i class="fa-brands fa-linkedin-in fa-lg"></i>
             </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">Twitter</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewbox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                />
-              </svg>
+            <a href="https://www.youtube.com/@PaperProcess" class="text-slate-500 hover:text-white">
+                <span class="sr-only">YouTube</span>
+                <i class="fa-brands fa-youtube fa-lg"></i>
             </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">GitHub</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewbox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+            <a href="https://twitter.com/PaperProcess" class="text-slate-500 hover:text-white">
+                <span class="sr-only">Twitter</span>
+                <i class="fa-brands fa-twitter fa-lg"></i>
             </a>
+      
+      
           </div>
-          <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy; 2022 PaperProcess. All rights reserved.<br />
-            Designed by
-            <a href="http://sxunders.com/" class="text-gray-900">@sxunders</a>.
-            Powered by
-            <a href="https://tailwindcss.com/" class="text-gray-900"
-              >tailwindcss</a
-            >.
-          </p>
+          <p class="mt-8 text-center text-base text-slate-500">&copy; 2023 PaperProcess. All rights reserved.</p>
         </div>
-      </div>
     </footer>
-  </body>
+</main>
+
+<img alt="" sizes="100vw" src="/assets/staticbg.png" decoding="async" data-nimg="fill" class="absolute top-[220px] left-0 z-[10] h-full w-full select-none md:top-0" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent; z-index: -1;">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<script>
+
+  let text = new SplitType('#hello');
+  let characters = document.querySelectorAll('.char');
+
+  for(i=0; i<characters.length; i++){
+    characters[i].classList.add('translate-y-full');
+  }
+
+  gsap.to('.char', {
+    y: 0,
+    stagger: 0.02,
+    delay: 0.01,
+    duration: 0.75
+  })
+  
+</script>
+</body>
 </html>

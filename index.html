@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="16x16" href="/favicon.svg" />
     <title>PaperProcess | Digital Transformation Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6695672601.js" crossorigin="anonymous"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -14,407 +17,134 @@
             fontFamily: {
               Poppins: ["Poppins", "sans-serif"],
             },
-            backgroundImage: {
-              graphpaper: "url('./img/bg_06.svg')",
-            },
           },
         },
       };
     </script>
-    <link
-      rel="icon"
-      href="./img/favicon.svg"
-      sizes="any"
-      type="image/svg+xml"
-    />
-  </head>
-  <body class="font-Poppins">
-    <header>
-      <!-- ALERT -->
-      <div class="bg-black text-center py-1">
-        <a
-          href="https://www.linkedin.com/posts/michaelsxunders_automation-what-why-how-of-rpa-activity-6965013505863258112-jE0W"
-        >
-          <div
-            class="p-2 bg-white items-center text-gray-900 leading-none lg:rounded-full flex lg:inline-flex hover:bg-green-500 hover:text-white"
-            role="alert"
-          >
-            <span
-              class="flex rounded-full bg-green-500 text-white uppercase px-2 py-1 text-xs font-bold mr-3"
-              >New</span
-            >
-            <span class="font-semibold mr-2 text-left flex-auto"
-              >Automation: What, Why & How of RPA.</span
-            >
-            <svg
-              class="fill-current opacity-75 h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 20 20"
-            >
-              <path
-                d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
-              />
-            </svg>
-          </div>
-        </a>
-      </div>
-      <!-- NAV -->
-      <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
-        <div
-          class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2"
-        >
-          <div class="flex items-center justify-start w-1/4 h-full pr-4">
-            <a href="./index.html" class="inline-block py-4 md:py-0">
-              <span
-                class="p-1 text-3xl font-extrabold leading-none text-gray-900"
-              >
-                <img class="w-auto" src="./img/logo.svg" alt=""
-              /></span>
-            </a>
-          </div>
-          <div
-            class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
-            :class="{'flex fixed': showMenu, 'hidden': !showMenu }"
-          >
-            <div
-              class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row"
-            >
-              <a
-                href="./index.html"
-                class="inline-flex items-center block w-auto h-16 px-6 text-xl font-extrabold leading-none text-gray-900 md:hidden"
-                >PaperProcess<span class="text-green-500">.</span></a
-              >
-              <div
-                class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center"
-              ></div>
-              <div
-                class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0"
-              >
-                <a
-                  href="./index.html"
-                  class="w-full px-6 py-2 mr-0 text-gray-500 md:px-0 md:mr-4 lg:mr-5 md:w-auto hover:text-gray-900"
-                  >Home</a
-                >
-                <a
-                  href="./team.html"
-                  class="w-full px-6 py-2 mr-0 text-gray-500 md:px-0 md:mr-4 lg:mr-5 md:w-auto hover:text-gray-900"
-                  >Team</a
-                >
-                <a
-                  href="./insight.html"
-                  class="w-full px-6 py-2 mr-0 text-gray-500 md:px-0 md:mr-4 lg:mr-5 md:w-auto hover:text-gray-900"
-                  >Insight</a
-                >
-                <a
-                  href="./contact.html"
-                  class="inline-flex items-center w-full px-6 py-3 text-sm font-medium leading-4 text-white bg-gray-900 md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-green-500 hover:text-white focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-green-600"
-                  >Contact</a
-                >
-              </div>
+</head>
+<body class="font-Poppins text-slate-12 selection:bg-cyan-5 selection:text-cyan-12 bg-black">
+<main>
+    <div class="mx-auto flex h-screen max-w-7xl flex-col justify-between px-4">
+        <header class="flex h-[80px] items-center justify-between md:h-[100px] m-w-7xl">
+            <div class="flex items-center gap-3">
+                <a href="/index.html"><img src="logo.png" alt="Logo" class="h-8 transition ease-in-out delay-150 hover:-rotate-180 hover:scale-110 duration-300"></a>
             </div>
-          </div>
-          <div
-            @click="showMenu = !showMenu"
-            class="absolute right-0 flex flex-col items-center items-end justify-center w-10 h-10 bg-white rounded-full cursor-pointer md:hidden hover:bg-gray-100"
-          >
-            <svg
-              class="w-6 h-6 text-gray-700"
-              x-show="!showMenu"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewbox="0 0 24 24"
-              stroke="currentColor"
-              x-cloak=""
-            >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg
-              class="w-6 h-6 text-gray-700"
-              x-show="showMenu"
-              fill="none"
-              stroke="currentColor"
-              viewbox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              x-cloak=""
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </div>
+            <nav class="flex items-center gap-2">
+                <ul class="flex gap-3">
+                    <li class="inline-flex items-center justify-center">
+                        <a href="https://medium.com/paperprocess" class="text-slate-500 font-regular mr-4 p-2 rounded hover:text-white group transition duration-300">Insights
+                            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-500"></span>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center justify-center">
+                        <a href="#" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-slate-500 font-regular mr-4 p-2 rounded hover:text-white group transition duration-300">Resources
+                            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-500"></span>
+                        </a>
+                    </li>
+                </ul>
+                <span aria-hidden="true" class="bg-slate-800 mr-4 hidden h-5 w-px sm:!inline-block"></span>
+                <ul class="flex gap-2">
+                    <li class="inline-flex items-center justify-center">
+                        <a href="https://www.linkedin.com/company/87204728" class="text-slate-500 mr-4 p-2 rounded hover:text-white hover:bg-slate-800">
+                            <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                        </a>
+                    </li>
+                    <li class="inline-flex items-center justify-center">
+                        <a href="/contact.html" class="text-slate-500 mr-4 p-2 rounded hover:text-white hover:bg-slate-800">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mx-auto flex h-screen max-w-7xl flex-col justify-between px-4">
+            <div class="relative overflow-hidden">
+                <div class="relative pt-6 pb-16 sm:pb-24">
+                  <main class="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
+                    <div class="text-center">
+                      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-7xl">
+                        <span class="block xl:inline text-green-500 animate-pulse">Accelerate </span><span class="block text-slate-200 xl:inline">Your Digital</span>
+                        <span class="block text-slate-200 xl:inline">Transformation Strategy.</span>
+                      </h1>
+                      <p class="mx-auto mt-3 max-w-md text-base text-slate-600 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">Extract your intuition. Visualise your experiences. Drive meaningful change.
+                        Reshape your operational future—We can engineer it.</p>
+                      <div class="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
+                        <div class="rounded-md shadow">
+                          <a href="/contact.html" class="flex w-full items-center justify-center rounded-md border border-transparent bg-slate-800 px-2 py-2 text-base font-semibold text-slate-200 md:py-2 md:px-10 md:text-lg hover:border-green-500 hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-green-500 duration-[400ms,700ms] transition-[color,box-shadow]">Get Started</a>
+                        </div>
+                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                          <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-semibold hover:text-white text-slate-200 md:py-2 md:px-10 md:text-lg">Learn More <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.75 6.75L19.25 12L13.75 17.25"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H4.75"></path></svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </main>
+                </div>
+            </div>
+            <span class="animate-bounce text-3xl block text-center mb-4">
+                <a href="#quiz" class="no-underline"><i class="fa-solid fa-arrow-down text-slate-200"></i></a>
+            </span>
         </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- HERO -->
-      <div class="my-24 lg:overflow-hidden bg-[url('/dist/img/bg_06.svg')]">
-        <div class="text-center">
-          <h1
-            class="mt-4 text-4xl font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-7xl"
-          >
-            <span
-              class="block xl:inline bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-sky-500"
-              >Accelerate</span
-            >
-            <span class="block text-gray-900 xl:inline"
-              >Your Digital<br />
-              Transformation Strategy.</span
-            >
-          </h1>
-          <p
-            class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
-          >
-            Extract your intuition. Visualise your experiences. Drive meaningful
-            change.<br />
-            <u>Reshape your operational future</u>—We can engineer it.
-          </p>
-          <div class="mt-5 mx-auto sm:flex sm:justify-center md:mt-8">
-            <div class="mt-10 sm:mt-12">
-              <form
-                action="https://formsubmit.co/paperprocess@sxunders.com"
-                method="POST"
-                class="sm:max-w-xl sm:mx-auto lg:mx-0"
-              >
-                <div class="sm:flex">
-                  <div class="min-w-0 flex-1">
-                    <label for="email" class="sr-only">Email address</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      class="w-full px-4 py-3 rounded-md border border-gray-200 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                    />
-                  </div>
-                  <div class="mt-3 sm:mt-0 sm:ml-3">
-                    <button
-                      type="submit"
-                      class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-green-500 to-sky-500 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                    >
-                      Get In Touch
-                    </button>
+    </div>
+    <hero>
+        <div>
+            <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+              <div>
+                <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+                  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <span class="block text-slate-200">Ready to dive in?</span>
+                    <span class="block text-slate-800">✔ Free No Obligation Consultation</span>
+                  </h2>
+                  <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                    <div class="inline-flex rounded-md shadow">
+                      <a href="/contact.html" class="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-800 px-5 py-3 text-base font-medium text-white hover:bg-green-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Get started</a>
+                    </div>
                   </div>
                 </div>
-                <p class="mt-3 text-sm text-gray-300 sm:mt-4">
-                  ✔ Free No Obligation Consultation
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CLIENTS -->
-      <div class="bg-white">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div
-            class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5"
-          >
-            <div
-              class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"
-            >
-              <img
-                class="h-18"
-                src="./img/clients/facebook.png"
-                alt="Facebook"
-              />
-            </div>
-            <div
-              class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"
-            >
-              <img
-                class="h-18"
-                src="./img/clients/gecapital.png"
-                alt="GE Capital"
-              />
-            </div>
-            <div
-              class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"
-            >
-              <img
-                class="h-18"
-                src="./img/clients/goldmansachs.png"
-                alt="Goldman Sachs"
-              />
-            </div>
-            <div
-              class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1"
-            >
-              <img class="h-18" src="./img/clients/kaggle.png" alt="Kaggle" />
-            </div>
-            <div
-              class="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1"
-            >
-              <img class="h-18" src="./img/clients/bbc.png" alt="BBC" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="relative mt-24 sm:mt-32 sm:py-16">
-        <div aria-hidden="true" class="hidden sm:block">
-          <div
-            class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"
-          ></div>
-          <svg
-            class="absolute top-8 left-1/2 -ml-3"
-            width="404"
-            height="392"
-            fill="none"
-            viewbox="0 0 404 392"
-          >
-            <defs>
-              <pattern
-                id="8228f071-bcee-4ec8-905a-2a059a2cc4fb"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternunits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="404"
-              height="392"
-              fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)"
-            />
-          </svg>
-        </div>
-        <div
-          class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
-        >
-          <div
-            class="relative rounded-2xl px-6 py-10 bg-green-500 overflow-hidden shadow-xl sm:px-12 sm:py-20"
-          >
-            <div
-              aria-hidden="true"
-              class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
-            >
-              <svg
-                class="absolute inset-0 h-full w-full"
-                preserveaspectratio="xMidYMid slice"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewbox="0 0 1463 360"
-              >
-                <path
-                  class="text-green-400 text-opacity-40"
-                  fill="currentColor"
-                  d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"
-                />
-                <path
-                  class="text-green-600 text-opacity-40"
-                  fill="currentColor"
-                  d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
-                />
-              </svg>
-            </div>
-            <div class="relative">
-              <div class="sm:text-center">
-                <h2
-                  class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl"
-                >
-                  Challenges are just opportunities in disguse.
-                </h2>
-                <p class="mt-6 mx-auto max-w-2xl text-lg text-rose-100">
-                  Reach out today for a stress free, no obligation consultation
-                  to discuss your roadmap, challenges and budget to see if we're
-                  the right fit for you.
-                </p>
               </div>
-              <form
-                action="https://formsubmit.co/paperprocess@sxunders.com"
-                method="POST"
-                class="mt-12 sm:mx-auto sm:max-w-lg sm:flex"
-              >
-                <div class="min-w-0 flex-1">
-                  <label for="cta-email" class="sr-only">Email address</label>
-                  <input
-                    id="cta-email"
-                    type="email"
-                    class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-500"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div class="mt-4 sm:mt-0 sm:ml-3">
-                  <button
-                    type="submit"
-                    class="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-900 text-base font-medium text-white shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-500 sm:px-10"
-                  >
-                    Get In Touch
-                  </button>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
-    </main>
-
-    <footer class="bg-white">
-      <!-- FOOTER -->
-      <div class="max-w-7xl mx-auto pb-8 px-4">
-        <div
-          class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16"
-        >
-          <div class="flex space-x-6 md:order-2">
-            <a href="#" class="text-gray-400 hover:text-gray-500">
+    </hero>
+    <footer>
+        <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+            <div class="px-5 py-2">
+              <a href="/index.html" class="text-slate-500 font-regular hover:text-white">Home</a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="https://medium.com/paperprocess" class="text-slate-500 font-regular hover:text-white">Insights</a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-slate-500 font-regular hover:text-white">Resources</a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-slate-500 font-regular hover:text-white">Partners</a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="#" class="text-slate-500 font-regular hover:text-white">Press</a>
+            </div>
+          </nav>
+          <div class="mt-8 flex justify-center space-x-6">
+            <a href="https://www.linkedin.com/company/87204728" class="text-slate-500 hover:text-white">
               <span class="sr-only">LinkedIn</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewbox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                />
-              </svg>
+              <i class="fa-brands fa-linkedin-in fa-lg"></i>
             </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">GitHub</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewbox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+            <a href="https://www.youtube.com/@PaperProcess" class="text-slate-500 hover:text-white">
+                <span class="sr-only">YouTube</span>
+                <i class="fa-brands fa-youtube fa-lg"></i>
             </a>
+            <a href="https://twitter.com/PaperProcess" class="text-slate-500 hover:text-white">
+                <span class="sr-only">Twitter</span>
+                <i class="fa-brands fa-twitter fa-lg"></i>
+            </a>
+      
+      
           </div>
-          <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy; 2022 PaperProcess. All rights reserved.<br />
-            Designed by
-            <a href="http://sxunders.com/" class="text-gray-900">@sxunders</a>.
-            Powered by
-            <a href="https://tailwindcss.com/" class="text-gray-900"
-              >tailwindcss</a
-            >.
-          </p>
+          <p class="mt-8 text-center text-base text-slate-500">&copy; 2023 PaperProcess. All rights reserved.</p>
         </div>
-      </div>
     </footer>
-  </body>
+</main>
+
+<img alt="" sizes="100vw" src="/assets/staticbg.png" decoding="async" data-nimg="fill" class="absolute top-[220px] left-0 z-[10] h-full w-full select-none md:top-0" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent; z-index: -1;">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
 </html>
