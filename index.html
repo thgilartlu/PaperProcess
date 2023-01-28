@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" style="scroll-behavior: smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,18 @@
             fontFamily: {
               Poppins: ["Poppins", "sans-serif"],
             },
+            animation: {
+              fadeIn: "fadeIn 2s ease-in forwards"
+            },
+            variants: {
+                animation: ["motion-safe"]
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 }
+              }
+            }
           },
         },
       };
@@ -62,7 +74,7 @@
                 <div class="relative pt-6 pb-16 sm:pb-24">
                   <main class="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
                     <div class="text-center">
-                      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-7xl">
+                      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">
                         <span class="block xl:inline text-green-500 animate-pulse">Accelerate </span><span class="block text-slate-200 xl:inline">Your Digital</span>
                         <span class="block text-slate-200 xl:inline">Transformation Strategy.</span>
                       </h1>
@@ -73,7 +85,7 @@
                           <a href="/contact.html" class="flex w-full items-center justify-center rounded-md border border-transparent bg-slate-800 px-2 py-2 text-base font-semibold text-slate-200 md:py-2 md:px-10 md:text-lg hover:border-green-500 hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-green-500 duration-[400ms,700ms] transition-[color,box-shadow]">Get Started</a>
                         </div>
                         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                          <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-semibold hover:text-white text-slate-200 md:py-2 md:px-10 md:text-lg">Learn More <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.75 6.75L19.25 12L13.75 17.25"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H4.75"></path></svg></a>
+                          <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-semibold hover:text-white text-slate-200 md:py-2 md:px-10 md:text-lg">Learn More <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.75 6.75L19.25 12L13.75 17.25"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H4.75"></path></svg></a>
                         </div>
                       </div>
                     </div>
@@ -81,14 +93,111 @@
                 </div>
             </div>
             <span class="animate-bounce text-3xl block text-center mb-4">
-                <a href="#quiz" class="no-underline"><i class="fa-solid fa-arrow-down text-slate-200"></i></a>
+                <a href="#cGl0Y2g=" class="no-underline"><i class="fa-solid fa-arrow-down text-slate-200"></i></a>
             </span>
         </div>
     </div>
-    <hero>
+    <quiz>
+      <div id="cGl0Y2g=">
+          <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+            <div>
+              <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-8 lg:px-8">
+                <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
+                  <span class="block text-slate-200">What % of businesses believe that their processes are measured, documented and managed?</span>
+                </h2>
+              </div>
+            </div>
+            <div class="js-show-on-scroll">
+              <dl class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+                <div class="overflow-hidden rounded-lg bg-slate-200 px-4 py-5 shadow sm:p-6 my-auto hover:bg-red-500 hover:scale-105 cursor-pointer" onclick="RevealPitch()">
+                  <dd class="text-3xl font-semibold tracking-tight text-black text-center">37%</dd>
+                </div>
+                <div class="overflow-hidden rounded-lg bg-slate-200 px-4 py-5 shadow sm:p-6 my-auto hover:bg-red-500 hover:scale-105 cursor-pointer" onclick="RevealPitch()">
+                  <dd class="text-3xl font-semibold tracking-tight text-black text-center">25%</dd>
+                </div>
+                <div class="overflow-hidden rounded-lg bg-slate-200 px-4 py-5 shadow sm:p-6 my-auto hover:bg-green-500 hover:scale-105 cursor-pointer" onclick="RevealPitch()">
+                  <dd class="text-3xl font-semibold tracking-tight text-black text-center">4%</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="js-show-on-scroll" id="pitchDiv" style="display:none">
+              <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+                <div class="grid grid-cols-5 gap-3">
+                  <div class="col-span-2">
+                    <div>
+                      <ul role="list" class="divide-y divide-slate-800">
+                        <li class="py-2">
+                          <div class="flex space-x-3">
+                            <div class="flex-1 space-y-1">
+                              <div class="flex items-center justify-between">
+                                <h3 class="text-2xl text-slate-200 font-bold">37%</h3>
+                              </div>
+                              <p class="text-sm text-slate-600">of businesses believe that their processes are repeatable, defined, documented but unmeasured.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="py-2">
+                          <div class="flex space-x-3">
+                            <div class="flex-1 space-y-1">
+                              <div class="flex items-center justify-between">
+                                <h3 class="text-2xl text-slate-200 font-bold">28%</h3>
+                              </div>
+                              <p class="text-sm text-slate-600">of businesses believe that their processes are defined, measured but unmanaged.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="py-2">
+                          <div class="flex space-x-3">
+                            <div class="flex-1 space-y-1">
+                              <div class="flex items-center justify-between">
+                                <h3 class="text-2xl text-slate-200 font-bold">25%</h3>
+                              </div>
+                              <p class="text-sm text-slate-600">of businesses believe that their processes are repeatable but undocumented.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="py-2">
+                          <div class="flex space-x-3">
+                            <div class="flex-1 space-y-1">
+                              <div class="flex items-center justify-between">
+                                <h3 class="text-2xl text-slate-200 font-bold">6%</h3>
+                              </div>
+                              <p class="text-sm text-slate-600">of businesses believe that their processes are accidental and and outcome of reaction.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="py-2">
+                          <div class="flex space-x-3">
+                            <div class="flex-1 space-y-1">
+                              <div class="flex items-center justify-between">
+                                <h3 class="text-2xl text-slate-200 font-bold">4%</h3>
+                              </div>
+                              <p class="text-sm text-slate-600">of business believe that their processes are measured, documented and managed.</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-span-3">
+                    <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                      <span class="block text-slate-200"><u class="text-green-500">Only 4%</u> of businesses believe that their processes are measured, documented and managed.</span>
+                    </h2>
+                    <p class="mx-auto mt-3 max-w-md text-base text-slate-600 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
+                      We live in a complex world, documenting processes can be highly time-consuming and costly. Business often don't believe they have the time to perform the in-depth analysis required to solve problems. Instead, remedial actions and containment measures make the problems less visible and a plethora of ad-hoc solutions are deployed in the hope they will prevent recurrence. When a problem returns, the cycle repeats.
+                    </p>
+                    <a href="#" class="flex w-full items-center rounded-md border border-transparent mt-4 text-base font-semibold hover:text-white text-slate-200 md:text-lg">How We Fix This <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.75 6.75L19.25 12L13.75 17.25"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H4.75"></path></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </quiz>
+    <cta>
         <div>
             <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
-              <div>
+              <div class="js-show-on-scroll">
                 <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
                   <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     <span class="block text-slate-200">Ready to dive in?</span>
@@ -103,7 +212,7 @@
               </div>
             </div>
         </div>
-    </hero>
+    </cta>
     <footer>
         <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
           <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
@@ -146,5 +255,35 @@
 
 <img alt="" sizes="100vw" src="/assets/staticbg.png" decoding="async" data-nimg="fill" class="absolute top-[220px] left-0 z-[10] h-full w-full select-none md:top-0" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent; z-index: -1;">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<!-- GLOBAL FADE -->
+<script>
+  const callback = function (entries) {
+  entries.forEach((entry) => {
+    console.log(entry);
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-fadeIn");
+    } else {
+      entry.target.classList.remove("animate-fadeIn");
+    }
+  });
+  };
+
+  const observer = new IntersectionObserver(callback);
+
+  const targets = document.querySelectorAll(".js-show-on-scroll");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
+
+</script>
+<!-- PITCH FADE -->
+<script>
+  function RevealPitch() {
+    var T = document.getElementById("pitchDiv");
+    T.style.display = "block";  // <-- Set it to block
+  }
+</script>
 </body>
 </html>
